@@ -9,4 +9,8 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 5 }
 
   has_secure_password
+
+  before_create do
+    self.remember_token = Digest::SHA1.hexdigest(SecureRandom.urlsafe_base64)
+  end
 end

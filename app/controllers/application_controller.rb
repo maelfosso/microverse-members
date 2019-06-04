@@ -4,10 +4,13 @@ class ApplicationController < ActionController::Base
   end
 
   def signin
+    @error = {}
     user = User.find_by_email(params[:session][:email])
-    if user&.authenticate(params[:session][:password])
-      remember(user)
-      return true
+    if user
+      user.authenticate(params[:session][:password]) ?
+        (return remember(user)) : @error[:password] = 'Wrong password'
+    else
+      @error[:email] = "This email doesn't exist"
     end
     false
   end

@@ -4,10 +4,12 @@
     <p>
       <%= f.label :email %>
       <%= f.email_field :email %>
+      <p class="error"><%= @error[:email] if @error %></p>
     </p>
     <p>
       <%= f.label :password %>
       <%= f.password_field :password %>
+      <p class="error"><%= @error[:password] if @error %></p>
     </p>
     <%= f.submit "Sign in" %>
   <% end %>

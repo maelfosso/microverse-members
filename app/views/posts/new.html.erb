@@ -1,0 +1,6 @@
+<%= form_for(@post, url: posts_path) do |f| %>
+    <%= f.label :story %>
+    <%= f.text_area :story, class: 'form_control' %>
+
+    <%= f.submit "Post the story", class: "btn btn-primary" %>
+  <% end %>

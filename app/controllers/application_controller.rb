@@ -35,4 +35,13 @@ class ApplicationController < ActionController::Base
   def current_user=(user)
     @current_user = user
   end
+
+  # Authentiction and Post
+  def connected_user
+    current_user
+    if @current_user.nil?
+      flash[:danger] = "Please, you must sign in to create a post"
+      redirect_to signin_url
+    end
+  end
 end

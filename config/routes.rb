@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   post '/signin', to: 'sessions#create'
   delete '/signout', to: 'sessions#delete'
   root 'application#index'
+
+  resources :posts, only: [:new, :create, :index]
 end

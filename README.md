@@ -5,7 +5,7 @@ It is part of [Microverse](https://www.microverse.org/) curriculum.
 
 ## To Test
 
-Please run `rails db:seed` to load user.
+Please run `rails db:migrate:reset` and then `rails db:seed` to load user.
 
 
 ## Authors

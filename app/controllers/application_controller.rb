@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   def index
-    current_user ? render('sessions/show') : redirect_to('/signin')
+    redirect_to('/posts')
   end
 
   def signin

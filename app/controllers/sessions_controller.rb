@@ -7,7 +7,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    signin ? redirect_to(root_path) : render('new')
+    if signin
+      redirect_to(root_path)
+    else
+      flash.alert = 'Wrong entry, try again!'
+      render('new')
+    end
   end
 
   def delete

@@ -1,0 +1,14 @@
+<header class="header">
+  <h1>
+    <% if @current_user %>
+      <span><%= @current_user&.name %></span>
+      <span>
+        <%= link_to 'Sign out', signout_path, method: :delete %>
+      </span>
+    <% else %>
+      <span>
+        <%= link_to 'Sign in', signin_path %>
+      </span>
+    <% end %>
+  </h1>
+</header>

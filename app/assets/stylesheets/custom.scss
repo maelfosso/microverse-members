@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  overflow: auto;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+
+  h1 {
+    margin: 0;
+    font-size: 1.3em;
+    text-align: center;
+
+    span {
+      padding: 10px;
+      display: inline-block;
+    }
+  }
+}

@@ -10,13 +10,6 @@
   </head>
 
   <body>
-    <% if @current_user %>
-      <p>Name: <%= @current_user.name %></p>
-      <p>Email: <%= @current_user.email %></p>
-      <p> <%= link_to 'Sign out', signout_path, method: :delete %> </p>
-
-      <hr/>
-    <% end %>
     <%= yield %>
   </body>
 </html>

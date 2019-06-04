@@ -2,6 +2,7 @@
   <h1>
     <% if @current_user %>
       <span><%= @current_user&.name %></span>
+      <span><%= link_to 'Create a post', new_post_path %></span>
       <span>
         <%= link_to 'Sign out', signout_path, method: :delete %>
       </span>
@@ -10,5 +11,8 @@
         <%= link_to 'Sign in', signin_path %>
       </span>
     <% end %>
+    <span>
+      <%= link_to 'All Posts', posts_path %>
+    </span>
   </h1>
 </header>

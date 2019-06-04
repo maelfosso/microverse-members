@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:success] = "Post successfully created"
-      render 'index'
+      redirect_to posts_path
     else
       flash[:danger] = "Invalid form element"
       debugger

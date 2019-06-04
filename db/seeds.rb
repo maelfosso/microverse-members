@@ -11,10 +11,17 @@
   email = "user-ex-#{i}@microverse-monly.com"
   password = "password"
 
-  User.create!(
+  u = User.create(
     name: name,
     email: email,
     password: password,
     password_confirmation: password
   )
+
+  4.times do |j|
+    Post.create!(
+      story: Faker::Lorem.paragraph,
+      user: u
+    )
+  end 
 end

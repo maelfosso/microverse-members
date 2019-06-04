@@ -2,7 +2,8 @@ class PostsController < ApplicationController
   before_action :connected_user, only: [:create, :new]
 
   def index
-    
+    current_user
+    @posts = Post.all
   end
 
   def new

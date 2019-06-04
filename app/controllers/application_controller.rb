@@ -6,9 +6,7 @@ class ApplicationController < ActionController::Base
   def signin
     user = User.find_by_email(params[:session][:email])
     if user&.authenticate(params[:session][:password])
-      current_user = user
-      session[:user_id] = user.id
-      remember(user) if params[:session][:remember_me] == '1'
+      remember(user)
       return true
     end
     false
@@ -25,6 +23,7 @@ class ApplicationController < ActionController::Base
                           Digest::SHA1.hexdigest(SecureRandom.urlsafe_base64))
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
+    current_user = user
   end
 
   def current_user

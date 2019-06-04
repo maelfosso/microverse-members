@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
 
   def delete
     signout
-    redirect_to '/signin'
+    redirect_to '/posts'
   end
 end

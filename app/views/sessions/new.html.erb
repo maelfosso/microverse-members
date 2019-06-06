@@ -1,0 +1,16 @@
+<div class="session">
+  <h1 class="title">Authentication</h1>
+  <%= form_for :session, url: signin_path do |f| %>
+    <p>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+      <p class="error"><%= @error[:email] if @error %></p>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <p class="error"><%= @error[:password] if @error %></p>
+    </p>
+    <%= f.submit "Sign in" %>
+  <% end %>
+</div>

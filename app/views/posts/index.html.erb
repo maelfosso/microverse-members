@@ -1,0 +1,11 @@
+<h1>All posts</h1>
+<ul class="posts">
+  <% @posts.each do |post| %>
+  <li>
+    <div><strong>Story</strong> : <%= post.story %></div>
+    <% if @current_user %>
+      <div><strong>Author</strong> : <%= post.user.name %></div>
+    <% end %>
+  </li>
+  <% end %>
+</ul>

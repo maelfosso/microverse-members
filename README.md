@@ -1,24 +1,14 @@
-# README
+# Members-only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project aims to master rails forms and the requirements of secure website.
+It is part of [Microverse](https://www.microverse.org/) curriculum.
 
-Things you may want to cover:
+## To Test
 
-* Ruby version
+Please run `rails db:migrate:reset` and then `rails db:seed` to load user.
 
-* System dependencies
 
-* Configuration
+## Authors
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Fabien RAKOTOMAMPIANDRA _https://github.com/FabienNeibaf_
+- Mael FOSSO _https://github.com/maelfosso_
